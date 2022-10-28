@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "HallymGothic-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KOTRALEAP';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRALEAP.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'twayair';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* font-family */
+  --content: "HallymGothic-Regular", cursive;
+  /* --title: "Happiness-Sans-Title", 'Noto Sans KR', sans-serif; */
+  --title: 'KOTRALEAP', 'Noto Sans KR', sans-serif;
+
+  /* color */
+  --grey: #cfcfcf;
+  --grey-dark: #989898;
+  --green-light: #00cbb7;
+  --green: rgb(31, 149, 135);
+  --orange: rgb(231, 153, 36);
+  --orange-light: #f3eae8;
+  --white: #fff;
+  --html: #d46713;
+  --css: #156a9c;
+  --js: #eace4b;
+  --react: #20a9d8;
+  --sass: #b8416e;
+
+  /* layout */
+  --gap: 10px;
+}

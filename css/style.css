@@ -1,0 +1,207 @@
+@charset "utf-8";
+
+body {
+  font-family: var(--content);
+}
+
+.inner {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* 헤더 영역 */
+.portfolio {
+  display: hidden;
+}
+.header {
+  margin: 3em 0 3em;
+}
+
+.header .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header .inner > a {
+  background: url('../images/kimsooyeong.png') no-repeat center/contain;
+}
+.header h1{
+  margin-bottom: 1rem;
+  font-family: var(--title);
+  font-size: 1.8em;
+  opacity: 0;
+}
+.gnb {
+  display: flex;
+  font-size: 0.8em;
+}
+.gnb li {
+  width: 8rem;
+  text-align: center;
+  border-right: 1px solid black;
+}
+.gnb li:last-child {
+  border: none;
+}
+.gnb li:hover {
+  font-family: var(--title);
+  font-size: 1.1em;
+}
+
+/* 메인 영역 */
+/* portfolio */
+.work-list {
+  font-size: 0.9rem;
+}
+.work-list > li {
+  background: black;
+  margin-bottom: 0.5em;
+  padding: 1em 1.8em;
+  border-radius: 0.1em;
+  overflow: hidden;
+  height: 4em;
+  transition: all 150ms ease-in;
+  color: white;
+}
+
+.work-list > li:hover {
+  background: white;
+  color: black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.work-list .work-active {
+  height: 100vh;
+  background: white;
+  color: black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.work-list li header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--title);
+  cursor: pointer;
+}
+
+.tag {
+  display: flex;
+  font-size: 0.8em;
+}
+
+.tag span {
+  padding: 0.2em 0.7em;
+  margin-left: 0.5em;
+  border-radius: 0.3em;
+  font-family: var(--content);
+}
+
+.work-info {
+  display: flex;
+  margin: 1.5em;
+}
+
+.work-thumb {
+  flex: 1 1 50%;
+  margin-right: 1.5em;
+}
+
+.work-thumb img {
+  width: 100%;
+}
+
+.work-detail {
+  flex: 1 1 50%;
+}
+.work-buttons {
+  display: flex;
+  width: 100%;
+  gap: 0.5em;
+}
+.work-buttons button {
+  width: 100%;
+  padding: 0.5em 0;
+  font-family: inherit;
+  margin-bottom: 2em;
+  background: black;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.work-detail h4 {
+  font-family: var(--title);
+  line-height: 1.5;
+  font-size: 1.1em;
+}
+.work-detail p {
+  margin-bottom: 1em;
+}
+.skill-tool {}
+.skill-tool li {}
+.skill-tool li img {
+  width: 3em;
+}
+
+/* about */
+.about .inner {
+  display: flex;
+}
+.about-img {
+  flex: 1 1 40%;
+  margin-right: 1em;
+}
+.about-img img {
+  width: 100%;
+}
+.about-info {
+  flex: 1 1 60%;
+}
+
+.about-info h3 {
+  font-family: var(--title);
+  padding-bottom: 1em;
+  border-bottom: 1px solid black;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+}
+.about-info h3 span:last-child {
+  font-size: 1.5em;
+}
+
+.about-detail {
+  margin-bottom: 1em;
+}
+.about-detail h4 {
+  text-transform: uppercase;
+  line-height: 2;
+  font-family: var(--title);
+  letter-spacing: 1;
+}
+.about-detail ul {}
+.about-detail ul li {
+  line-height: 2;
+  display: flex;
+  align-items: center;
+}
+
+.about-detail ul span:first-child {
+  color: var(--orange);
+  margin-right: 0.8em;
+  font-size: 0.8em;
+  background: var(--orange-light);
+  padding: 0 0.7em;
+  border-radius: 0.2em;
+  line-height: 1.5;
+}
+.experience span:first-child{
+  width: 10.5em;
+  text-align: center;
+}
+/* contact */
+.contact {
+}
