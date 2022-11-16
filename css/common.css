@@ -20,11 +20,24 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LINESeedKR-Bd';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
 :root {
   /* font-family */
-  --content: "HallymGothic-Regular", cursive;
-  /* --title: "Happiness-Sans-Title", 'Noto Sans KR', sans-serif; */
-  --title: 'KOTRALEAP', 'Noto Sans KR', sans-serif;
+  --content: "NanumSquareNeo-Variable", cursive;
+  --title: 'LINESeedKR-Bd', 'Noto Sans KR', sans-serif;
 
   /* color */
   --grey: #cfcfcf;
@@ -34,12 +47,6 @@
   --orange: rgb(231, 153, 36);
   --orange-light: #f3eae8;
   --white: #fff;
-  --html: #d46713;
-  --css: #156a9c;
-  --js: #eace4b;
-  --react: #20a9d8;
-  --sass: #b8416e;
 
-  /* layout */
-  --gap: 10px;
+  --shadow1: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }

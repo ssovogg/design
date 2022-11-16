@@ -1,70 +1,67 @@
-let workList = document.querySelectorAll(".work-list li");
-for (const list of workList) {
-  list.addEventListener("click", () => {
-    console.log(list);
-    for (const list of workList) {
-      list.classList.remove("work-active");
-    }
-    if(list.className === "work-active"){
-      list.classList.remove("work-active");
-    }else {
-      list.classList.add("work-active");
-    }
+// 포트폴리오 탭
+const workArea = document.querySelector(".portfolio");
+const workTabs = workArea.querySelectorAll("[data-tab-target]");
+const workConts = workArea.querySelectorAll("[data-tab-content]");
+workTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = document.querySelector(tab.dataset.tabTarget);
+    workTabs.forEach((tabs) => {
+      tabs.classList.remove("tab_active");
+    });
+    workConts.forEach((conts) => {
+      conts.classList.remove("cont_active");
+    });
+    tab.classList.add("tab_active");
+    target.classList.add("cont_active");
   });
+});
+
+
+// My Plant 슬라이드 구현
+const plantSlide = document.querySelectorAll(".plant_thumb li"),
+  plantPrevBtn = document.querySelector(".plant_prev"),
+  plantNextBtn = document.querySelector(".plant_next");
+let currentplantIdx = 0;
+plantPrevBtn.addEventListener("click", () => {
+  moveplantSlide(currentplantIdx == 0 ? 3 : currentplantIdx - 1);
+});
+plantNextBtn.addEventListener("click", () => {
+  moveplantSlide(currentplantIdx == 3 ? 0 : currentplantIdx + 1);
+});
+function moveplantSlide(num) {
+  currentplantIdx = num;
+  plantSlide.forEach((list) => list.classList.remove("plant_active"));
+  plantSlide[num].classList.add("plant_active");
 }
 
-// // 스크롤시 특정 영역 감지 이벤트 (09.21)
-// // 스크롤 이벤트 감지 -> 해당 스크롤 범위 내에서 class 추가
-// // 창 크기 변경 시 높이 계산 다시하기 (09.22)
-// let aboutTop = document.getElementById("about").offsetTop;
-// let projectTop = document.getElementById("project").offsetTop;
-// window.addEventListener("resize", () => {
-//   aboutTop = document.getElementById("about").offsetTop;
-//   projectTop = document.getElementById("project").offsetTop;
-// });
-// window.addEventListener("scroll", () => {
-//   window.scrollY > -1 && window.scrollY < aboutTop
-//     ? document.getElementById("gnb_home").classList.add("pg_active")
-//     : document.getElementById("gnb_home").classList.remove("pg_active");
-//   window.scrollY >= aboutTop && window.scrollY < projectTop
-//     ? document.getElementById("gnb_about").classList.add("pg_active")
-//     : document.getElementById("gnb_about").classList.remove("pg_active");
-//   window.scrollY >= projectTop
-//     ? document.getElementById("gnb_project").classList.add("pg_active")
-//     : document.getElementById("gnb_project").classList.remove("pg_active");
-// });
+// Star Bang 슬라이드 구현
+const vsSlide = document.querySelectorAll(".starbang_info li"),
+  vsPrevBtn = document.querySelector(".starbang_info-prev"),
+  vsNextBtn = document.querySelector(".starbang_info-next");
+let currentVsIdx = 0;
+vsPrevBtn.addEventListener("click", () => {
+  moveVsSlide(currentVsIdx == 0 ? 3 : currentVsIdx - 1);
+});
+vsNextBtn.addEventListener("click", () => {
+  moveVsSlide(currentVsIdx == 3 ? 0 : currentVsIdx + 1);
+});
+function moveVsSlide(num) {
+  currentVsIdx = num;
+  vsSlide.forEach((list) => list.classList.remove("star-info_active"));
+  vsSlide[num].classList.add("star-info_active");
+}
 
-// // project (09.21)
-// const projectList = document.getElementsByClassName("proejct-list");
-// const projectTabs = document.querySelectorAll(".project-cate li label");
-// const projects = document.querySelectorAll(".project-thumb");
-// const projectsArr = Object.values(projects);
-// for (const tab of projectTabs) {
-//   tab.addEventListener("click", (e) => {
-//     const name = e.target.innerText;
-//     if (name === "All") {
-//       projectsArr.map((item) => item.classList.remove("hidden"));
-//       return;
-//     }
-//     projectsArr.map((item) =>
-//       name !== item.getAttribute("data-item")
-//         ? item.classList.add("hidden")
-//         : item.classList.remove("hidden")
-//     );
-//   });
-// }
-// projectList.innerHTML = projectsArr;
+// go top
+const goTopBtn = document.querySelector('.goTop');
+goTopBtn.addEventListener('click', (e)=>{
+  e.preventDefault();
+  window.scrollTo({top:0, behavior:'smooth'});
+})
 
-// // gallery slide
-// const tabLists = document.querySelectorAll(".tab_contents li");
-// const tabBtns = document.querySelectorAll(".tab_btn");
-// for (const list of tabLists) {
-//   const tabBtn = list.querySelector(".tab_btn");
-//   tabBtn.addEventListener("click", (event) => {
-//     event.preventDefault();
-//     for (const list of tabLists) {
-//       list.classList.remove("tab_active");
-//     }
-//     event.target.parentNode.classList.add("tab_active");
-//   });
-// }
+window.addEventListener('scroll', ()=>{
+  if(this.scrollY > 100){
+    goTopBtn.classList.add('goTop_active');
+  } else {
+    goTopBtn.classList.remove('goTop_active');
+  }
+})
