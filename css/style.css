@@ -138,6 +138,9 @@ body {
 .work_desc {
   margin: 1rem;
   font-size: 1.1rem;
+  text-align: center;
+  line-height: 1.5;
+  word-break: keep-all;
 }
 .work_info {
   display: flex;
