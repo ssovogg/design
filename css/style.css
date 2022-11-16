@@ -489,6 +489,9 @@ body {
   .about .inner {
     flex-direction: column;
   }
+  .about-info {
+    margin: 0 1rem;
+  }
 }
 
 /* ========== footer ========== */
@@ -630,4 +633,41 @@ body {
   #w_clone .work_cont .work_thumb {
     height: 70vw;
   }
+  .about-info {
+    margin: 0 1rem;
+    text-align: center;
+  }
+  .about-detail ul li {
+    font-size: 0.85rem;
+    word-break: keep-all;
+    align-items: flex-start;
+  }
+  .about-detail ul li span {
+    text-align: start;
+    line-height: 1.5;
+  }
+  .about-detail h4 {
+    margin: 2rem 0 0.5rem;
+  }
+  .skillnTool_wrap {
+    flex-direction: column;
+  }
+  .about-detail .tools,
+  .about-detail .skills {
+    flex-direction: row;
+    margin-bottom: 1rem;
+  }
+  .about-detail .tools li,
+  .about-detail .skills li {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+  }
+  .about-detail .tools li span ,
+  .about-detail .skills li span {
+    text-align: center;
+    font-size: 0.5rem;
+    line-height: 1.2;
+    margin-top: 0.3rem;
 }
